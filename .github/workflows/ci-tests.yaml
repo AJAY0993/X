@@ -21,9 +21,9 @@ jobs:
      
       # Install Bun
       - name: Install Bun
-        run: |
-          curl -fsSL https://bun.sh/install | bash
-          echo "::add-path::$(bun bin)"
+        uses: oven-sh/setup-bun@v2
+        with:
+          version: "latest" # or "canary"
   
       # Install dependencies
       - name: Install dependencies
